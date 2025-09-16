@@ -1,0 +1,105 @@
+name: treinamento_flutter
+description: "Aplicativo de pokedex para treinamento de flutter"
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '3.7.0'
+
+objectbox:
+  output_dir:
+    lib: /app/data/models/objectbox
+    test: objectbox
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.19.0 #Manipulação de datas, números e textos internacionais.
+  dio: ^5.8.0+1 #Cliente HTTP para fazer requisições à API.
+  mobx: ^2.5.0 #Gerenciamento de estado reativo.
+  flutter_modular: ^6.4.1 #Gerenciamento de rotas e injeção de dependências.
+  flutter_mobx: ^2.3.0 #Integração do MobX com Flutter.
+  flutter_secure_storage: ^9.2.4 #bug na versão 9.1.1. #Armazenamento seguro de dados sensíveis.
+  connectivity_plus: ^6.1.4 #Verificação de conectividade de rede.
+  form_builder_validators: ^11.1.2 #Validações para formulários.
+  brasil_fields: ^1.15.0 #Formatação de campos específicos do Brasil.
+  json_annotation: ^4.9.0 #Anotações para serialização JSON.
+  jwt_decoder: ^2.0.1 #Decodificação de tokens JWT.
+  flutter_dotenv: ^5.2.1 #Gerenciamento de variáveis de ambiente.
+  http_parser: ^4.1.2 #Análise de dados HTTP.
+  mime_type: ^1.0.1 #Determinação de tipos MIME.
+  shimmer: ^3.0.0 #Animação de loading com efeito de reflexo nos widgets com conteúdo.
+  image_picker: ^1.1.2 #Seleção de imagens da galeria ou câmera.
+  carousel_slider: ^5.1.1 # Carousel de imagens
+  permission_handler: ^12.0.0+1 #Gerenciamento de permissões de aplicativos.
+  shared_preferences: ^2.5.3 #Armazenamento de dados simples e persistentes.
+  path_provider: ^2.1.5 #Acesso a diretórios específicos do sistema.
+  path: ^1.9.1 #fornece operações comuns para manipulação de caminhos: união, divisão, normalização, etc.
+  package_info_plus: ^8.3.0 #Informações sobre o pacote do aplicativo.
+  mask_text_input_formatter: ^2.9.0 #Máscaras de entrada de texto.
+  #  google_fonts: ^6.2.1 #Uso de fontes do Google.
+  cool_dropdown: ^2.1.1 #Dropdowns personalizáveis.
+  flutter_svg: ^2.2.0 #Renderização de imagens SVG.
+  cached_network_image: ^3.4.1 #Carregamento de imagens com cache.
+  badges: ^3.1.2 #Exibição de badges (etiquetas) em widgets.
+  equatable: ^2.0.7 #Comparação de objetos.
+  result_dart: ^2.1.1 #Representação de resultados de operações.
+  flutter_native_splash: ^2.4.6 #Tela de splash nativa.
+  device_info_plus: ^11.3.0 #Informações sobre o dispositivo.
+  animations: ^2.0.11 #Animações avançadas.
+  photo_view: ^0.15.0 #Visualização de fotos com zoom e rotação.
+  file_picker: ^10.2.0 #Seleção de arquivos.
+  rxdart: ^0.28.0 #Programação reativa com Dart.
+  visibility_detector: ^0.4.0+2 #Detecção de visibilidade de widgets.
+  uuid: ^4.5.1 #Geração de UUIDs.
+  auto_injector: ^2.1.1 #Injeção de dependências automática.
+  camera: ^0.11.1 #Acesso à câmera.
+  async: ^2.11.0 #Utilitários de programação assíncrona.
+  flutter_staggered_grid_view: ^0.7.0 #Renderização de Grid com design responsivo
+  cupertino_icons: ^1.0.8
+  flutter_tabler_icons: ^1.43.0 #ìcones para flutter
+  mobx_codegen: ^2.7.1 #Gerador de códigos mobx
+  objectbox: ^4.3.0 #Banco de dados NoSQL
+  objectbox_flutter_libs: any #Dependência do Object Box
+  dotted_border: ^2.1.0 #Borda pontilhada
+  collection: ^1.19.1 #Coleções de dados
+  no_screenshot: ^0.3.1 #Bloqueio de captura de tela
+  map_launcher: ^3.5.0 #Abrir mapas em aplicativos de terceiros
+  google_fonts: ^6.2.1 #Fontes do Google
+  infinite_scroll_pagination: ^5.1.0 #Paginação infinita
+  dart_ng_forms: ^0.2.5 #Formulários reativos para Dart
+  envied: ^1.1.1 #Gerenciamento de variáveis de ambiente
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  envied_generator: ^1.1.1 #Gerador de código para variáveis de ambiente
+  build_runner: ^2.4.15
+  json_serializable: ^6.9.5
+  objectbox_generator: any
+
+dependency_overrides:
+  meta: ^1.17.0
+  collection: ^1.19.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/svg/
+    - .env
+
+  fonts:
+    - family: Square721
+      fonts:
+        - asset: assets/fonts/sqr721_BT_m.ttf
+        - asset: assets/fonts/sqr721_BT_i.ttf
+          style: italic
+        - asset: assets/fonts/sqr721_BT_b.ttf
+          weight: 700
+        - asset: assets/fonts/sqr721_BT_bi.ttf
+          weight: 700
+          style: italic

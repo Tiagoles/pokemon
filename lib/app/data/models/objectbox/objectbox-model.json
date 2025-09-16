@@ -1,0 +1,79 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:91826891056938692",
+      "lastPropertyId": "10:6008112933087079981",
+      "name": "PokemonLocalModel",
+      "properties": [
+        {
+          "id": "1:6737414657897627357",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1461291932706803832",
+          "name": "number",
+          "type": 6,
+          "flags": 32808,
+          "indexId": "1:3926772508921404678"
+        },
+        {
+          "id": "3:5308899080590174315",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:589879022632992074",
+          "name": "type",
+          "type": 9
+        },
+        {
+          "id": "5:4608138201912195164",
+          "name": "types",
+          "type": 9
+        },
+        {
+          "id": "6:4776551347453119202",
+          "name": "photo",
+          "type": 9
+        },
+        {
+          "id": "7:8626705000023865949",
+          "name": "species",
+          "type": 9
+        },
+        {
+          "id": "8:7004412874421289192",
+          "name": "height",
+          "type": 6
+        },
+        {
+          "id": "9:190189879260393208",
+          "name": "weight",
+          "type": 6
+        },
+        {
+          "id": "10:6008112933087079981",
+          "name": "abilities",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:91826891056938692",
+  "lastIndexId": "1:3926772508921404678",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
