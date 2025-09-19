@@ -4,60 +4,74 @@
   "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
   "entities": [
     {
-      "id": "1:91826891056938692",
-      "lastPropertyId": "10:6008112933087079981",
-      "name": "PokemonLocalModel",
+      "id": "2:6969181447330812071",
+      "lastPropertyId": "1:3888797291481063947",
+      "name": "DbGeneral",
       "properties": [
         {
-          "id": "1:6737414657897627357",
+          "id": "1:3888797291481063947",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:2966244332989137236",
+      "lastPropertyId": "10:3990055099324032117",
+      "name": "DbPokemon",
+      "properties": [
+        {
+          "id": "1:9101049066621798401",
           "name": "id",
           "type": 6,
           "flags": 1
         },
         {
-          "id": "2:1461291932706803832",
+          "id": "2:2019965051709309235",
           "name": "number",
           "type": 6,
           "flags": 32808,
-          "indexId": "1:3926772508921404678"
+          "indexId": "2:8273947626658969508"
         },
         {
-          "id": "3:5308899080590174315",
+          "id": "3:2743031530301937338",
           "name": "name",
           "type": 9
         },
         {
-          "id": "4:589879022632992074",
+          "id": "4:1453569528386774628",
           "name": "type",
           "type": 9
         },
         {
-          "id": "5:4608138201912195164",
+          "id": "5:508718589989569593",
           "name": "types",
           "type": 9
         },
         {
-          "id": "6:4776551347453119202",
+          "id": "6:7885268000234485646",
           "name": "photo",
           "type": 9
         },
         {
-          "id": "7:8626705000023865949",
+          "id": "7:7071695497726472396",
           "name": "species",
           "type": 9
         },
         {
-          "id": "8:7004412874421289192",
+          "id": "8:583355311159552722",
           "name": "height",
           "type": 6
         },
         {
-          "id": "9:190189879260393208",
+          "id": "9:3069688149896645138",
           "name": "weight",
           "type": 6
         },
         {
-          "id": "10:6008112933087079981",
+          "id": "10:3990055099324032117",
           "name": "abilities",
           "type": 9
         }
@@ -65,15 +79,28 @@
       "relations": []
     }
   ],
-  "lastEntityId": "1:91826891056938692",
-  "lastIndexId": "1:3926772508921404678",
+  "lastEntityId": "3:2966244332989137236",
+  "lastIndexId": "2:8273947626658969508",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
   "modelVersion": 5,
   "modelVersionParserMinimum": 5,
-  "retiredEntityUids": [],
+  "retiredEntityUids": [
+    91826891056938692
+  ],
   "retiredIndexUids": [],
-  "retiredPropertyUids": [],
+  "retiredPropertyUids": [
+    6737414657897627357,
+    1461291932706803832,
+    5308899080590174315,
+    589879022632992074,
+    4608138201912195164,
+    4776551347453119202,
+    8626705000023865949,
+    7004412874421289192,
+    190189879260393208,
+    6008112933087079981
+  ],
   "retiredRelationUids": [],
   "version": 1
 }

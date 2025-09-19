@@ -1,8 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
-
-part 'pokemon_pokeapi_model.g.dart';
-
-@JsonSerializable(explicitToJson: true)
+part 'pokemon_pokeapi.g.dart';
+@JsonSerializable(explicitToJson: false)
 class PokemonPokeapiModel {
   final int id;
   final String name;
@@ -30,123 +28,80 @@ class PokemonPokeapiModel {
   });
 
   factory PokemonPokeapiModel.fromJson(Map<String, dynamic> json) => _$PokemonPokeapiModelFromJson(json);
-  Map<String, dynamic> toJson() => _$PokemonPokeapiModelToJson(this);
 }
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: false)
 class PokemonAbility {
   final AbilityDetail ability;
   @JsonKey(name: 'is_hidden')
   final bool isHidden;
   final int slot;
-
   PokemonAbility({required this.ability, required this.isHidden, required this.slot});
-
-  factory PokemonAbility.fromJson(Map<String, dynamic> json) => _$PokemonAbilityFromJson(json);
-  Map<String, dynamic> toJson() => _$PokemonAbilityToJson(this);
+  factory PokemonAbility.fromJson(Map<String, dynamic> json) =>  _$PokemonAbilityFromJson(json);
 }
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: false)
 class AbilityDetail {
   final String name;
   final String url;
-
   AbilityDetail({required this.name, required this.url});
-
   factory AbilityDetail.fromJson(Map<String, dynamic> json) => _$AbilityDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$AbilityDetailToJson(this);
 }
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: false)
 class PokemonType {
   final int slot;
   final TypeDetail type;
-
   PokemonType({required this.slot, required this.type});
-
   factory PokemonType.fromJson(Map<String, dynamic> json) => _$PokemonTypeFromJson(json);
-  Map<String, dynamic> toJson() => _$PokemonTypeToJson(this);
 }
-
-@JsonSerializable()
-class TypeDetail {
+@JsonSerializable(explicitToJson: false)
+class TypeDetail{
   final String name;
   final String url;
-
   TypeDetail({required this.name, required this.url});
-
   factory TypeDetail.fromJson(Map<String, dynamic> json) => _$TypeDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$TypeDetailToJson(this);
 }
-
-@JsonSerializable()
+@JsonSerializable(explicitToJson: false)
 class PokemonStat {
   @JsonKey(name: 'base_stat')
   final int baseStat;
   final int effort;
   final StatDetail stat;
-
   PokemonStat({required this.baseStat, required this.effort, required this.stat});
-
   factory PokemonStat.fromJson(Map<String, dynamic> json) => _$PokemonStatFromJson(json);
-  Map<String, dynamic> toJson() => _$PokemonStatToJson(this);
 }
-
-@JsonSerializable()
+@JsonSerializable(explicitToJson: false)
 class StatDetail {
   final String name;
   final String url;
-
   StatDetail({required this.name, required this.url});
-
   factory StatDetail.fromJson(Map<String, dynamic> json) => _$StatDetailFromJson(json);
-  Map<String, dynamic> toJson() => _$StatDetailToJson(this);
 }
-
-@JsonSerializable()
+@JsonSerializable(explicitToJson: false)
 class PokemonSprites {
   @JsonKey(name: 'front_default')
   final String? frontDefault;
-  final PokemonOtherSprites? other;
-
-  PokemonSprites({
-    this.frontDefault,
-    this.other,
-  });
-
-  factory PokemonSprites.fromJson(Map<String, dynamic> json) =>
-      _$PokemonSpritesFromJson(json);
-
-  Map<String, dynamic> toJson() => _$PokemonSpritesToJson(this);
+  final PokemonOtherSprites? others;
+  PokemonSprites({this.frontDefault, this.others});
+  factory PokemonSprites.fromJson(Map<String, dynamic> json) => _$PokemonSpritesFromJson(json);
 }
-
-@JsonSerializable()
+@JsonSerializable(explicitToJson: false)
 class PokemonOtherSprites {
   @JsonKey(name: 'dream_world')
   final DreamWorldSprites? dreamWorld;
-
   PokemonOtherSprites({this.dreamWorld});
-
-  factory PokemonOtherSprites.fromJson(Map<String, dynamic> json) =>
-      _$PokemonOtherSpritesFromJson(json);
-
-  Map<String, dynamic> toJson() => _$PokemonOtherSpritesToJson(this);
+  factory PokemonOtherSprites.fromJson(Map<String, dynamic> json) => _$PokemonOtherSpritesFromJson(json);
 }
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: false)
 class DreamWorldSprites {
-  @JsonKey(name: 'front_default')
+  @JsonKey(name: 'from_default')
   final String? frontDefault;
-
   DreamWorldSprites({this.frontDefault});
-
-  factory DreamWorldSprites.fromJson(Map<String, dynamic> json) =>
-      _$DreamWorldSpritesFromJson(json);
-
-  Map<String, dynamic> toJson() => _$DreamWorldSpritesToJson(this);
+  factory DreamWorldSprites.fromJson(Map<String, dynamic> json) => _$DreamWorldSpritesFromJson(json);
 }
-
-@JsonSerializable()
+@JsonSerializable(explicitToJson: false)
 class PokemonSpecies {
   final String name;
   final String url;
@@ -154,5 +109,4 @@ class PokemonSpecies {
   PokemonSpecies({required this.name, required this.url});
 
   factory PokemonSpecies.fromJson(Map<String, dynamic> json) => _$PokemonSpeciesFromJson(json);
-  Map<String, dynamic> toJson() => _$PokemonSpeciesToJson(this);
 }

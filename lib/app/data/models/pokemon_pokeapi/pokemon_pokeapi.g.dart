@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'pokemon_pokeapi_model.dart';
+part of 'pokemon_pokeapi.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
@@ -34,11 +34,11 @@ Map<String, dynamic> _$PokemonPokeapiModelToJson(
       'base_experience': instance.baseExperience,
       'height': instance.height,
       'weight': instance.weight,
-      'abilities': instance.abilities.map((e) => e.toJson()).toList(),
-      'types': instance.types.map((e) => e.toJson()).toList(),
-      'stats': instance.stats.map((e) => e.toJson()).toList(),
-      'sprites': instance.sprites.toJson(),
-      'species': instance.species.toJson(),
+      'abilities': instance.abilities,
+      'types': instance.types,
+      'stats': instance.stats,
+      'sprites': instance.sprites,
+      'species': instance.species,
     };
 
 PokemonAbility _$PokemonAbilityFromJson(Map<String, dynamic> json) =>
@@ -116,15 +116,16 @@ Map<String, dynamic> _$StatDetailToJson(StatDetail instance) =>
 PokemonSprites _$PokemonSpritesFromJson(Map<String, dynamic> json) =>
     PokemonSprites(
       frontDefault: json['front_default'] as String?,
-      other: json['other'] == null
+      others: json['others'] == null
           ? null
-          : PokemonOtherSprites.fromJson(json['other'] as Map<String, dynamic>),
+          : PokemonOtherSprites.fromJson(
+              json['others'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$PokemonSpritesToJson(PokemonSprites instance) =>
     <String, dynamic>{
       'front_default': instance.frontDefault,
-      'other': instance.other,
+      'others': instance.others,
     };
 
 PokemonOtherSprites _$PokemonOtherSpritesFromJson(Map<String, dynamic> json) =>
@@ -143,12 +144,12 @@ Map<String, dynamic> _$PokemonOtherSpritesToJson(
 
 DreamWorldSprites _$DreamWorldSpritesFromJson(Map<String, dynamic> json) =>
     DreamWorldSprites(
-      frontDefault: json['front_default'] as String?,
+      frontDefault: json['from_default'] as String?,
     );
 
 Map<String, dynamic> _$DreamWorldSpritesToJson(DreamWorldSprites instance) =>
     <String, dynamic>{
-      'front_default': instance.frontDefault,
+      'from_default': instance.frontDefault,
     };
 
 PokemonSpecies _$PokemonSpeciesFromJson(Map<String, dynamic> json) =>

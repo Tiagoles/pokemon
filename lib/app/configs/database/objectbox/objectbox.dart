@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart';
-import 'package:treinamento_flutter/app/data/models/objectbox/objectbox.g.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:treinamento_flutter/app/data/models/objectbox/objectbox.g.dart';
 
 const _path = 'objectbox';
 

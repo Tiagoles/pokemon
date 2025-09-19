@@ -1,16 +1,17 @@
 import 'package:result_dart/result_dart.dart';
+import 'package:treinamento_flutter/app/data/repositories/pokemon/pokemon_local_repository.dart';
 import 'package:treinamento_flutter/app/data/services/pokemon/pokemon_service.dart';
-import 'package:treinamento_flutter/app/domain/entities/pokemon/pokemon.dart';
-import 'package:treinamento_flutter/app/data/models/pokemon/pokemon_list.dart';
+
+import '../../../domain/entities/pokemon/pokemon.dart';
 
 class PokemonRepository {
-
   final PokemonService _service;
+  final PokemonLocalRepository _pokemonLocalRepository;
 
-  PokemonRepository(this._service);
+  PokemonRepository(this._service, this._pokemonLocalRepository);
 
-  AsyncResult<PokemonList> getAllByFilter({int limit = 9999, int offset = 0}) async {
-    return _service.getReferenceList(limit: limit,offset: offset).flatMap((resp) async {
+  AsyncResult<List<Pokemon>> getAllByFilter() async {
+    return _service.getAll().flatMap((resp) async {
       final references = resp.results;
       final (next, prev) = (resp.next, resp.previous);
       final pokemons = <Pokemon>[];
@@ -19,7 +20,7 @@ class PokemonRepository {
         if (result.isError()) return Failure(result.exceptionOrNull()!);
         pokemons.add(result.getOrNull()!);
       }
-      return Success(PokemonList(pokemons: pokemons, next: next, prev: prev));
+      return Success(pokemons);
     });
   }
 
@@ -27,8 +28,9 @@ class PokemonRepository {
     return _service.getByUrl(url).map((r) => Pokemon.fromPokeApiModel(r));
   }
 
-  AsyncResult<int> getQtdPokemons() async {
-    return _service.getQtdPokemons();
+  AsyncResult<List<Pokemon>> sync() async {
+    return getAllByFilter()
+        .flatMap((list) => _pokemonLocalRepository.clear().pure(list))
+        .flatMap((list) => _pokemonLocalRepository.putAll(list));
   }
-
 }

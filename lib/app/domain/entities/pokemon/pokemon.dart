@@ -1,7 +1,8 @@
 import 'dart:convert';
 
-import 'package:treinamento_flutter/app/data/models/pokemon/database_models/pokemon_local_model.dart';
-import 'package:treinamento_flutter/app/data/models/pokemon/pokemon_pokeapi/pokemon_pokeapi_model.dart';
+import 'package:treinamento_flutter/app/data/models/pokemon/db_pokemon.dart';
+
+import '../../../data/models/pokemon_pokeapi/pokemon_pokeapi.dart';
 
 class Pokemon {
   final int number;
@@ -23,24 +24,25 @@ class Pokemon {
     required this.species,
     required this.height,
     required this.weight,
-    required this.abilities
+    required this.abilities,
   });
 
-  factory Pokemon.fromPokeApiModel(PokemonPokeapiModel model){
+  factory Pokemon.fromPokeApiModel(PokemonPokeapiModel model) {
     return Pokemon(
       height: model.height,
       weight: model.weight,
       number: model.id,
       name: model.name,
-      type: model.types.isNotEmpty ? model.types.first.type.name : "Desconhecido",
+      type:
+          model.types.isNotEmpty ? model.types.first.type.name : "Desconhecido",
       types: model.types.map((e) => e.type.name).toList(),
-      photo: model.sprites.other?.dreamWorld?.frontDefault,
+      photo: model.sprites.others?.dreamWorld?.frontDefault,
       species: model.species.name,
-      abilities: model.abilities.map((e) => e.ability.name).toList()
+      abilities: model.abilities.map((e) => e.ability.name).toList(),
     );
   }
-  
-  factory Pokemon.fromPokemonLocalModel(PokemonLocalModel model){
+
+  factory Pokemon.fromPokemonLocalModel(DbPokemon model) {
     return Pokemon(
       height: model.height,
       weight: model.weight,
@@ -50,8 +52,7 @@ class Pokemon {
       types: List<String>.from(json.decode(model.types)),
       photo: model.photo,
       species: model.species,
-      abilities: List<String>.from(json.decode(model.abilities))
+      abilities: List<String>.from(json.decode(model.abilities)),
     );
   }
-
 }
