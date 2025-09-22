@@ -116,16 +116,15 @@ Map<String, dynamic> _$StatDetailToJson(StatDetail instance) =>
 PokemonSprites _$PokemonSpritesFromJson(Map<String, dynamic> json) =>
     PokemonSprites(
       frontDefault: json['front_default'] as String?,
-      others: json['others'] == null
+      other: json['other'] == null
           ? null
-          : PokemonOtherSprites.fromJson(
-              json['others'] as Map<String, dynamic>),
+          : PokemonOtherSprites.fromJson(json['other'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$PokemonSpritesToJson(PokemonSprites instance) =>
     <String, dynamic>{
       'front_default': instance.frontDefault,
-      'others': instance.others,
+      'other': instance.other,
     };
 
 PokemonOtherSprites _$PokemonOtherSpritesFromJson(Map<String, dynamic> json) =>
@@ -144,12 +143,12 @@ Map<String, dynamic> _$PokemonOtherSpritesToJson(
 
 DreamWorldSprites _$DreamWorldSpritesFromJson(Map<String, dynamic> json) =>
     DreamWorldSprites(
-      frontDefault: json['from_default'] as String?,
+      frontDefault: json['front_default'] as String?,
     );
 
 Map<String, dynamic> _$DreamWorldSpritesToJson(DreamWorldSprites instance) =>
     <String, dynamic>{
-      'from_default': instance.frontDefault,
+      'front_default': instance.frontDefault,
     };
 
 PokemonSpecies _$PokemonSpeciesFromJson(Map<String, dynamic> json) =>

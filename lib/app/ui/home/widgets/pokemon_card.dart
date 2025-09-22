@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:treinamento_flutter/app/utils/extensions/context_extensions.dart';
+import '../../../domain/enums/pokemon/pokemon_type.dart';
 
 class PokemonCard extends StatelessWidget {
   final String name;
@@ -19,9 +21,10 @@ class PokemonCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final (colors, customColors) = (context.colors, context.customColors);
+    final type = PokemonType.getType(this.type);
     return Card(
       elevation: 6,
-      color: customColors.success.colorContainer,
+      color: type.color,
       shadowColor: Colors.grey.withAlpha(300),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Padding(
@@ -36,23 +39,33 @@ class PokemonCard extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color: customColors.success.onColorContainer,
+                  color: Color.alphaBlend(
+                    Colors.black.withValues(alpha: 0.6),
+                    type.color,
+                  ),
                 ),
               ),
             ),
 
-            Center(
-              child: SvgPicture.network(
-                imageUrl,
-                height: 80,
-                fit: BoxFit.contain,
+            if (imageUrl.isNotEmpty)
+              Center(
+                child: SvgPicture.network(
+                  imageUrl,
+                  errorBuilder:
+                      (context, exception, param) =>
+                          Icon(TablerIcons.photo_off),
+                  height: 80,
+                  fit: BoxFit.contain,
+                ),
               ),
-            ),
             const SizedBox(height: 8),
             Text(
               name,
               style: TextStyle(
-                color: customColors.success.onColorContainer,
+                color: Color.alphaBlend(
+                  Colors.white.withValues(alpha: 0.8),
+                  type.color,
+                ),
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
               ),
@@ -60,13 +73,19 @@ class PokemonCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
-                color: customColors.info.colorContainer,
-                borderRadius: BorderRadius.circular(20),
+                color: Color.alphaBlend(
+                  Colors.white.withValues(alpha: 0.3),
+                  type.color,
+                ),
+                borderRadius: BorderRadius.circular(8),
               ),
               child: Text(
-                type,
+                type.desc,
                 style: TextStyle(
-                  color: customColors.info.onColorContainer,
+                  color: Color.alphaBlend(
+                    Colors.black.withValues(alpha: 0.6),
+                    type.color,
+                  ),
                   fontWeight: FontWeight.bold,
                 ),
               ),

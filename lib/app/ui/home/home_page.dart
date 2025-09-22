@@ -3,6 +3,7 @@ import 'package:treinamento_flutter/app/ui/core/widgets/layouts/simple_bar_layou
 import 'package:treinamento_flutter/app/ui/home/widgets/pokemon_card.dart';
 import 'package:treinamento_flutter/app/utils/extensions/context_extensions.dart';
 import '../pokemon/viewmodel/pokemon_view_model.dart';
+import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 class HomePage extends StatelessWidget {
   final PokemonViewModel pokemonViewModel;
@@ -33,7 +34,10 @@ class HomePage extends StatelessWidget {
             child: ListenableBuilder(
               listenable: pokemonViewModel.syncCommand,
               builder: (context, _) {
-                if (pokemonViewModel.syncCommand.completed) {
+                if (pokemonViewModel.syncCommand.running) {
+                  return Center(child: const CircularProgressIndicator());
+                }
+                if (pokemonViewModel.pokemons.value.isNotEmpty) {
                   return ListView.builder(
                     itemCount: pokemonViewModel.pokemons.value.length,
                     itemBuilder: (context, index) {
@@ -47,32 +51,29 @@ class HomePage extends StatelessWidget {
                     },
                   );
                 }
-                if (pokemonViewModel.syncCommand.error) {
-                  return Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: context.colors.error.withAlpha(50),
-                          border: Border.all(
-                            color: context.colors.errorContainer,
-                            width: 2,
-                          ),
-                          borderRadius: BorderRadius.circular(4),
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: context.colors.error.withAlpha(50),
+                        border: Border.all(
+                          color: context.colors.errorContainer,
+                          width: 2,
                         ),
-                        child: Text(
-                          pokemonViewModel.syncCommand.errorMessage ??
-                              'Erro ao carregar pokémons',
-                          style: textTheme.bodyMedium!.copyWith(
-                            color: context.colors.error,
-                          ),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Text(
+                        pokemonViewModel.syncCommand.errorMessage ??
+                            'Erro ao carregar pokémons',
+                        style: textTheme.bodyMedium!.copyWith(
+                          color: context.colors.error,
                         ),
                       ),
-                    ],
-                  );
-                }
-                return Center(child: const CircularProgressIndicator());
+                    ),
+                  ],
+                );
               },
             ),
           ),

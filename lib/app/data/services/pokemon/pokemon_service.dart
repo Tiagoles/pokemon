@@ -13,8 +13,8 @@ class PokemonService {
 
   AsyncResult<PokeApiListModel> getAll() async {
     final response = await _clientHttp.get(
-      'pokeapi_list',
-      queryParameters: {'offset': 0, 'limit': 9999},
+      '/pokemon',
+      queryParameters: {'offset': 0, 'limit': 10},
     );
     return Isolate.run(
       () => response.map((resp) => PokeApiListModel.fromJson(resp.data)),

@@ -21,92 +21,79 @@ export 'package:objectbox/objectbox.dart'; // so that callers only have to impor
 
 final _entities = <obx_int.ModelEntity>[
   obx_int.ModelEntity(
-    id: const obx_int.IdUid(2, 6969181447330812071),
-    name: 'DbGeneral',
-    lastPropertyId: const obx_int.IdUid(1, 3888797291481063947),
-    flags: 0,
-    properties: <obx_int.ModelProperty>[
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(1, 3888797291481063947),
-        name: 'id',
-        type: 6,
-        flags: 1,
-      ),
-    ],
-    relations: <obx_int.ModelRelation>[],
-    backlinks: <obx_int.ModelBacklink>[],
-  ),
+      id: const obx_int.IdUid(2, 6969181447330812071),
+      name: 'DbGeneral',
+      lastPropertyId: const obx_int.IdUid(1, 3888797291481063947),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 3888797291481063947),
+            name: 'id',
+            type: 6,
+            flags: 1)
+      ],
+      relations: <obx_int.ModelRelation>[],
+      backlinks: <obx_int.ModelBacklink>[]),
   obx_int.ModelEntity(
-    id: const obx_int.IdUid(3, 2966244332989137236),
-    name: 'DbPokemon',
-    lastPropertyId: const obx_int.IdUid(10, 3990055099324032117),
-    flags: 0,
-    properties: <obx_int.ModelProperty>[
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(1, 9101049066621798401),
-        name: 'id',
-        type: 6,
-        flags: 1,
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(2, 2019965051709309235),
-        name: 'number',
-        type: 6,
-        flags: 32808,
-        indexId: const obx_int.IdUid(2, 8273947626658969508),
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(3, 2743031530301937338),
-        name: 'name',
-        type: 9,
-        flags: 0,
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(4, 1453569528386774628),
-        name: 'type',
-        type: 9,
-        flags: 0,
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(5, 508718589989569593),
-        name: 'types',
-        type: 9,
-        flags: 0,
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(6, 7885268000234485646),
-        name: 'photo',
-        type: 9,
-        flags: 0,
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(7, 7071695497726472396),
-        name: 'species',
-        type: 9,
-        flags: 0,
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(8, 583355311159552722),
-        name: 'height',
-        type: 6,
-        flags: 0,
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(9, 3069688149896645138),
-        name: 'weight',
-        type: 6,
-        flags: 0,
-      ),
-      obx_int.ModelProperty(
-        id: const obx_int.IdUid(10, 3990055099324032117),
-        name: 'abilities',
-        type: 9,
-        flags: 0,
-      ),
-    ],
-    relations: <obx_int.ModelRelation>[],
-    backlinks: <obx_int.ModelBacklink>[],
-  ),
+      id: const obx_int.IdUid(3, 2966244332989137236),
+      name: 'DbPokemon',
+      lastPropertyId: const obx_int.IdUid(10, 3990055099324032117),
+      flags: 0,
+      properties: <obx_int.ModelProperty>[
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(1, 9101049066621798401),
+            name: 'id',
+            type: 6,
+            flags: 1),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(2, 2019965051709309235),
+            name: 'number',
+            type: 6,
+            flags: 32808,
+            indexId: const obx_int.IdUid(2, 8273947626658969508)),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(3, 2743031530301937338),
+            name: 'name',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(4, 1453569528386774628),
+            name: 'type',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(5, 508718589989569593),
+            name: 'types',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(6, 7885268000234485646),
+            name: 'photo',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(7, 7071695497726472396),
+            name: 'species',
+            type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(8, 583355311159552722),
+            name: 'height',
+            type: 6,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(9, 3069688149896645138),
+            name: 'weight',
+            type: 6,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(10, 3990055099324032117),
+            name: 'abilities',
+            type: 9,
+            flags: 0)
+      ],
+      relations: <obx_int.ModelRelation>[],
+      backlinks: <obx_int.ModelBacklink>[])
 ];
 
 /// Shortcut for [obx.Store.new] that passes [getObjectBoxModel] and for Flutter
@@ -120,177 +107,144 @@ final _entities = <obx_int.ModelEntity>[
 /// For Flutter apps, also calls `loadObjectBoxLibraryAndroidCompat()` from
 /// the ObjectBox Flutter library to fix loading the native ObjectBox library
 /// on Android 6 and older.
-Future<obx.Store> openStore({
-  String? directory,
-  int? maxDBSizeInKB,
-  int? maxDataSizeInKB,
-  int? fileMode,
-  int? maxReaders,
-  bool queriesCaseSensitiveDefault = true,
-  String? macosApplicationGroup,
-}) async {
+Future<obx.Store> openStore(
+    {String? directory,
+    int? maxDBSizeInKB,
+    int? maxDataSizeInKB,
+    int? fileMode,
+    int? maxReaders,
+    bool queriesCaseSensitiveDefault = true,
+    String? macosApplicationGroup}) async {
   await loadObjectBoxLibraryAndroidCompat();
-  return obx.Store(
-    getObjectBoxModel(),
-    directory: directory ?? (await defaultStoreDirectory()).path,
-    maxDBSizeInKB: maxDBSizeInKB,
-    maxDataSizeInKB: maxDataSizeInKB,
-    fileMode: fileMode,
-    maxReaders: maxReaders,
-    queriesCaseSensitiveDefault: queriesCaseSensitiveDefault,
-    macosApplicationGroup: macosApplicationGroup,
-  );
+  return obx.Store(getObjectBoxModel(),
+      directory: directory ?? (await defaultStoreDirectory()).path,
+      maxDBSizeInKB: maxDBSizeInKB,
+      maxDataSizeInKB: maxDataSizeInKB,
+      fileMode: fileMode,
+      maxReaders: maxReaders,
+      queriesCaseSensitiveDefault: queriesCaseSensitiveDefault,
+      macosApplicationGroup: macosApplicationGroup);
 }
 
 /// Returns the ObjectBox model definition for this project for use with
 /// [obx.Store.new].
 obx_int.ModelDefinition getObjectBoxModel() {
   final model = obx_int.ModelInfo(
-    entities: _entities,
-    lastEntityId: const obx_int.IdUid(3, 2966244332989137236),
-    lastIndexId: const obx_int.IdUid(2, 8273947626658969508),
-    lastRelationId: const obx_int.IdUid(0, 0),
-    lastSequenceId: const obx_int.IdUid(0, 0),
-    retiredEntityUids: const [91826891056938692],
-    retiredIndexUids: const [],
-    retiredPropertyUids: const [
-      6737414657897627357,
-      1461291932706803832,
-      5308899080590174315,
-      589879022632992074,
-      4608138201912195164,
-      4776551347453119202,
-      8626705000023865949,
-      7004412874421289192,
-      190189879260393208,
-      6008112933087079981,
-    ],
-    retiredRelationUids: const [],
-    modelVersion: 5,
-    modelVersionParserMinimum: 5,
-    version: 1,
-  );
+      entities: _entities,
+      lastEntityId: const obx_int.IdUid(3, 2966244332989137236),
+      lastIndexId: const obx_int.IdUid(2, 8273947626658969508),
+      lastRelationId: const obx_int.IdUid(0, 0),
+      lastSequenceId: const obx_int.IdUid(0, 0),
+      retiredEntityUids: const [91826891056938692],
+      retiredIndexUids: const [],
+      retiredPropertyUids: const [
+        6737414657897627357,
+        1461291932706803832,
+        5308899080590174315,
+        589879022632992074,
+        4608138201912195164,
+        4776551347453119202,
+        8626705000023865949,
+        7004412874421289192,
+        190189879260393208,
+        6008112933087079981
+      ],
+      retiredRelationUids: const [],
+      modelVersion: 5,
+      modelVersionParserMinimum: 5,
+      version: 1);
 
   final bindings = <Type, obx_int.EntityDefinition>{
     DbGeneral: obx_int.EntityDefinition<DbGeneral>(
-      model: _entities[0],
-      toOneRelations: (DbGeneral object) => [],
-      toManyRelations: (DbGeneral object) => {},
-      getId: (DbGeneral object) => object.id,
-      setId: (DbGeneral object, int id) {
-        object.id = id;
-      },
-      objectToFB: (DbGeneral object, fb.Builder fbb) {
-        fbb.startTable(2);
-        fbb.addInt64(0, object.id);
-        fbb.finish(fbb.endTable());
-        return object.id;
-      },
-      objectFromFB: (obx.Store store, ByteData fbData) {
-        final buffer = fb.BufferContext(fbData);
-        final rootOffset = buffer.derefObject(0);
-        final idParam = const fb.Int64Reader().vTableGet(
-          buffer,
-          rootOffset,
-          4,
-          0,
-        );
-        final object = DbGeneral(id: idParam);
+        model: _entities[0],
+        toOneRelations: (DbGeneral object) => [],
+        toManyRelations: (DbGeneral object) => {},
+        getId: (DbGeneral object) => object.id,
+        setId: (DbGeneral object, int id) {
+          object.id = id;
+        },
+        objectToFB: (DbGeneral object, fb.Builder fbb) {
+          fbb.startTable(2);
+          fbb.addInt64(0, object.id);
+          fbb.finish(fbb.endTable());
+          return object.id;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0);
+          final object = DbGeneral(id: idParam);
 
-        return object;
-      },
-    ),
+          return object;
+        }),
     DbPokemon: obx_int.EntityDefinition<DbPokemon>(
-      model: _entities[1],
-      toOneRelations: (DbPokemon object) => [],
-      toManyRelations: (DbPokemon object) => {},
-      getId: (DbPokemon object) => object.id,
-      setId: (DbPokemon object, int id) {
-        object.id = id;
-      },
-      objectToFB: (DbPokemon object, fb.Builder fbb) {
-        final nameOffset = fbb.writeString(object.name);
-        final typeOffset = fbb.writeString(object.type);
-        final typesOffset = fbb.writeString(object.types);
-        final photoOffset =
-            object.photo == null ? null : fbb.writeString(object.photo!);
-        final speciesOffset = fbb.writeString(object.species);
-        final abilitiesOffset = fbb.writeString(object.abilities);
-        fbb.startTable(11);
-        fbb.addInt64(0, object.id);
-        fbb.addInt64(1, object.number);
-        fbb.addOffset(2, nameOffset);
-        fbb.addOffset(3, typeOffset);
-        fbb.addOffset(4, typesOffset);
-        fbb.addOffset(5, photoOffset);
-        fbb.addOffset(6, speciesOffset);
-        fbb.addInt64(7, object.height);
-        fbb.addInt64(8, object.weight);
-        fbb.addOffset(9, abilitiesOffset);
-        fbb.finish(fbb.endTable());
-        return object.id;
-      },
-      objectFromFB: (obx.Store store, ByteData fbData) {
-        final buffer = fb.BufferContext(fbData);
-        final rootOffset = buffer.derefObject(0);
-        final idParam = const fb.Int64Reader().vTableGet(
-          buffer,
-          rootOffset,
-          4,
-          0,
-        );
-        final numberParam = const fb.Int64Reader().vTableGet(
-          buffer,
-          rootOffset,
-          6,
-          0,
-        );
-        final nameParam = const fb.StringReader(
-          asciiOptimization: true,
-        ).vTableGet(buffer, rootOffset, 8, '');
-        final typeParam = const fb.StringReader(
-          asciiOptimization: true,
-        ).vTableGet(buffer, rootOffset, 10, '');
-        final typesParam = const fb.StringReader(
-          asciiOptimization: true,
-        ).vTableGet(buffer, rootOffset, 12, '');
-        final photoParam = const fb.StringReader(
-          asciiOptimization: true,
-        ).vTableGetNullable(buffer, rootOffset, 14);
-        final speciesParam = const fb.StringReader(
-          asciiOptimization: true,
-        ).vTableGet(buffer, rootOffset, 16, '');
-        final heightParam = const fb.Int64Reader().vTableGet(
-          buffer,
-          rootOffset,
-          18,
-          0,
-        );
-        final weightParam = const fb.Int64Reader().vTableGet(
-          buffer,
-          rootOffset,
-          20,
-          0,
-        );
-        final abilitiesParam = const fb.StringReader(
-          asciiOptimization: true,
-        ).vTableGet(buffer, rootOffset, 22, '');
-        final object = DbPokemon(
-          id: idParam,
-          number: numberParam,
-          name: nameParam,
-          type: typeParam,
-          types: typesParam,
-          photo: photoParam,
-          species: speciesParam,
-          height: heightParam,
-          weight: weightParam,
-          abilities: abilitiesParam,
-        );
+        model: _entities[1],
+        toOneRelations: (DbPokemon object) => [],
+        toManyRelations: (DbPokemon object) => {},
+        getId: (DbPokemon object) => object.id,
+        setId: (DbPokemon object, int id) {
+          object.id = id;
+        },
+        objectToFB: (DbPokemon object, fb.Builder fbb) {
+          final nameOffset = fbb.writeString(object.name);
+          final typeOffset = fbb.writeString(object.type);
+          final typesOffset = fbb.writeString(object.types);
+          final photoOffset =
+              object.photo == null ? null : fbb.writeString(object.photo!);
+          final speciesOffset = fbb.writeString(object.species);
+          final abilitiesOffset = fbb.writeString(object.abilities);
+          fbb.startTable(11);
+          fbb.addInt64(0, object.id);
+          fbb.addInt64(1, object.number);
+          fbb.addOffset(2, nameOffset);
+          fbb.addOffset(3, typeOffset);
+          fbb.addOffset(4, typesOffset);
+          fbb.addOffset(5, photoOffset);
+          fbb.addOffset(6, speciesOffset);
+          fbb.addInt64(7, object.height);
+          fbb.addInt64(8, object.weight);
+          fbb.addOffset(9, abilitiesOffset);
+          fbb.finish(fbb.endTable());
+          return object.id;
+        },
+        objectFromFB: (obx.Store store, ByteData fbData) {
+          final buffer = fb.BufferContext(fbData);
+          final rootOffset = buffer.derefObject(0);
+          final idParam =
+              const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0);
+          final numberParam =
+              const fb.Int64Reader().vTableGet(buffer, rootOffset, 6, 0);
+          final nameParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGet(buffer, rootOffset, 8, '');
+          final typeParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGet(buffer, rootOffset, 10, '');
+          final typesParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGet(buffer, rootOffset, 12, '');
+          final photoParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGetNullable(buffer, rootOffset, 14);
+          final speciesParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGet(buffer, rootOffset, 16, '');
+          final heightParam =
+              const fb.Int64Reader().vTableGet(buffer, rootOffset, 18, 0);
+          final weightParam =
+              const fb.Int64Reader().vTableGet(buffer, rootOffset, 20, 0);
+          final abilitiesParam = const fb.StringReader(asciiOptimization: true)
+              .vTableGet(buffer, rootOffset, 22, '');
+          final object = DbPokemon(
+              id: idParam,
+              number: numberParam,
+              name: nameParam,
+              type: typeParam,
+              types: typesParam,
+              photo: photoParam,
+              species: speciesParam,
+              height: heightParam,
+              weight: weightParam,
+              abilities: abilitiesParam);
 
-        return object;
-      },
-    ),
+          return object;
+        })
   };
 
   return obx_int.ModelDefinition(model, bindings);
@@ -299,60 +253,49 @@ obx_int.ModelDefinition getObjectBoxModel() {
 /// [DbGeneral] entity fields to define ObjectBox queries.
 class DbGeneral_ {
   /// See [DbGeneral.id].
-  static final id = obx.QueryIntegerProperty<DbGeneral>(
-    _entities[0].properties[0],
-  );
+  static final id =
+      obx.QueryIntegerProperty<DbGeneral>(_entities[0].properties[0]);
 }
 
 /// [DbPokemon] entity fields to define ObjectBox queries.
 class DbPokemon_ {
   /// See [DbPokemon.id].
-  static final id = obx.QueryIntegerProperty<DbPokemon>(
-    _entities[1].properties[0],
-  );
+  static final id =
+      obx.QueryIntegerProperty<DbPokemon>(_entities[1].properties[0]);
 
   /// See [DbPokemon.number].
-  static final number = obx.QueryIntegerProperty<DbPokemon>(
-    _entities[1].properties[1],
-  );
+  static final number =
+      obx.QueryIntegerProperty<DbPokemon>(_entities[1].properties[1]);
 
   /// See [DbPokemon.name].
-  static final name = obx.QueryStringProperty<DbPokemon>(
-    _entities[1].properties[2],
-  );
+  static final name =
+      obx.QueryStringProperty<DbPokemon>(_entities[1].properties[2]);
 
   /// See [DbPokemon.type].
-  static final type = obx.QueryStringProperty<DbPokemon>(
-    _entities[1].properties[3],
-  );
+  static final type =
+      obx.QueryStringProperty<DbPokemon>(_entities[1].properties[3]);
 
   /// See [DbPokemon.types].
-  static final types = obx.QueryStringProperty<DbPokemon>(
-    _entities[1].properties[4],
-  );
+  static final types =
+      obx.QueryStringProperty<DbPokemon>(_entities[1].properties[4]);
 
   /// See [DbPokemon.photo].
-  static final photo = obx.QueryStringProperty<DbPokemon>(
-    _entities[1].properties[5],
-  );
+  static final photo =
+      obx.QueryStringProperty<DbPokemon>(_entities[1].properties[5]);
 
   /// See [DbPokemon.species].
-  static final species = obx.QueryStringProperty<DbPokemon>(
-    _entities[1].properties[6],
-  );
+  static final species =
+      obx.QueryStringProperty<DbPokemon>(_entities[1].properties[6]);
 
   /// See [DbPokemon.height].
-  static final height = obx.QueryIntegerProperty<DbPokemon>(
-    _entities[1].properties[7],
-  );
+  static final height =
+      obx.QueryIntegerProperty<DbPokemon>(_entities[1].properties[7]);
 
   /// See [DbPokemon.weight].
-  static final weight = obx.QueryIntegerProperty<DbPokemon>(
-    _entities[1].properties[8],
-  );
+  static final weight =
+      obx.QueryIntegerProperty<DbPokemon>(_entities[1].properties[8]);
 
   /// See [DbPokemon.abilities].
-  static final abilities = obx.QueryStringProperty<DbPokemon>(
-    _entities[1].properties[9],
-  );
+  static final abilities =
+      obx.QueryStringProperty<DbPokemon>(_entities[1].properties[9]);
 }

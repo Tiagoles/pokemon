@@ -27,10 +27,4 @@ class PokemonRepository {
   AsyncResult<Pokemon> getByUrl(String url) async {
     return _service.getByUrl(url).map((r) => Pokemon.fromPokeApiModel(r));
   }
-
-  AsyncResult<List<Pokemon>> sync() async {
-    return getAllByFilter()
-        .flatMap((list) => _pokemonLocalRepository.clear().pure(list))
-        .flatMap((list) => _pokemonLocalRepository.putAll(list));
-  }
 }

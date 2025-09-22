@@ -36,7 +36,7 @@ class Pokemon {
       type:
           model.types.isNotEmpty ? model.types.first.type.name : "Desconhecido",
       types: model.types.map((e) => e.type.name).toList(),
-      photo: model.sprites.others?.dreamWorld?.frontDefault,
+      photo: model.sprites.other?.dreamWorld?.frontDefault,
       species: model.species.name,
       abilities: model.abilities.map((e) => e.ability.name).toList(),
     );
